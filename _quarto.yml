@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "data-ride-blog"
+#  site-url: definir sitio
+  repo-url: https://github.com/gavmtz/blog-quarto
+  repo-actions: [issue]
+  open-graph: true
+  search: false
+  navbar:
+    right:
+      - icon: house
+        text: inicio
+        file: index.qmd
+      - text: blog
+        file: blog.qmd
+# Elementos que pueden agregarse
+#      - articulos/index.qmd
+#      - codigos/index.qmd
+#      - enseñanza/index.qmd
+#      - charlas/index.qmd
+  page-footer: 
+    left: 'Blog hecho con RStudio y [Quarto](https://quarto.org/)'
+    right:
+      - icon: github
+        href: https://github.com/gavmtz/blog-quarto
+      - icon: envelope
+        href: mailto:wpgam@outlook.com
+
+format:
+  html:
+    theme: tema.scss
+    mainfont: 'Lato'
+    code-copy: true
+    css: styles.css
+    highlight-style: googlecode

@@ -1,0 +1,21 @@
+---
+title: "blog"
+#subtitle: "stay noided... YUH!"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  grid-columns: 3
+  image-height: 170px
+  page-size: 100
+  categories: cloud
+  fields: [image, title, subtitle, author, date]
+# habilita 'description' cuando el post lo amerite
+  image-align: left
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+execute:
+  include: false
+---

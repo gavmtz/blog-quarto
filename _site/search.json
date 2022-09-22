@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "posts/hola-xaringan/index.html",
+    "href": "posts/hola-xaringan/index.html",
+    "title": "Hola Xaringan",
+    "section": "",
+    "text": "Xaringan es un paquete para la creación de diapositivas con remark.js a través de Rmarkdown. Su nombre proviene de Sharingan un dōjutsu del anime Naruto, desarrollado por Yihui Xie, ingeniero de software en RStudio.\nPara instalarlo en RStudio usando la consola:\ninstall.packages(\"xaringan\")\nDesde el repositorio en github (versión desarrollador):\nremotes::install_github('yihui/xaringan')"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Acerca de mí",
+    "section": "",
+    "text": "Saludos visitante 👋, soy Gerardo, estudiante en la Universidad de Guanajuato de la carrera en Biotecnología, me entusiasma lo relacionado a la ciencia de datos: análisis exploratorio, estadística y modelos de aprendizaje automático usando R y Python, he destinado este blog para compartir temas de interés. Tengo experiencia en laboratorio de investigación dentro del área agrícola y procesos biológicos, en la industria colaboré dentro de una consultoría en seguridad e higiene ambiental. Actualmente en busca de una posicion dentro de un equipo de analisis de datos."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "blog",
+    "section": "",
+    "text": "Tema de la Universidad de Guanajuato con Xaringan\n\n\n\nGerardo Avila-Martínez\n\n\nSep 13, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#cómo-creamos-una-presentacion",
+    "href": "posts/hola-xaringan/index.html#cómo-creamos-una-presentacion",
+    "title": "Hola Xaringan",
+    "section": "¿Cómo creamos una presentacion?",
+    "text": "¿Cómo creamos una presentacion?\n\nPrimera opción, crearla desde cero\n\nDesde RStudio, ir a:\nFile ->  New File -> R Markdown... -> From Template -> Ninja Presentation\nPresiona el botón knit para procesarlo y listo.\n\nSegunda opción, tema de la Universidad:\n\n\nUsar la plantilla de la universidad dentro del repositorio.\nDescargar el archivo .zip\n\n\n\n\n\n\n\nGuardar dentro de una carpeta.\nEjecutar el archivo ugto_xaringan.Rproj."
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#ejemplos",
+    "href": "posts/hola-xaringan/index.html#ejemplos",
+    "title": "Hola Xaringan",
+    "section": "Ejemplos",
+    "text": "Ejemplos\nTexas&AM\nRutgers\nMas Temas Xaringan\n\n\n¿Por qué Xaringan?\n\nAlmacenamiento en la nube.\nCapacidad de ejecución en exploradores web.\nTrabajar con código en R, python, SQL, CSS, C++, julia, javascript, entre otros.\n\n\n\n\nCars that go BOOM!\n\n\nCode\nlibrary(ggplot2)\nmtcars2 <- mtcars\nmtcars2$am <- factor(\n  mtcars$am, labels = c('automatic', 'manual')\n)\nggplot(mtcars2, aes(hp, mpg, color = am)) +\n  geom_point() +  geom_smooth(formula = y ~ x, method = \"loess\") +\n  theme(legend.position = 'bottom')\n\n\n\n\n\nFigure 1: MPG vs horsepower, colored by transmission."
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#ejemplos-de-otras-universidades",
+    "href": "posts/hola-xaringan/index.html#ejemplos-de-otras-universidades",
+    "title": "Hola Xaringan",
+    "section": "Ejemplos de otras universidades",
+    "text": "Ejemplos de otras universidades\nTexas&AM\nRutgers\nSydney"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#justificación",
+    "href": "posts/hola-xaringan/index.html#justificación",
+    "title": "Hola Xaringan",
+    "section": "Justificación",
+    "text": "Justificación\nLa idea nace después conocer diferentes paqueterías del entorno R, una de ellas permite la creación de presentaciones como alternativa a PowerPoint.\nEntre sus características principales permite:\n\nAutomatización y reproducibilidad.\nAlmacenamiento en la “nube”.\nAl procesarse se genera un archivo HTML ejecutable en exploradores web.\nTrabajar con código en R, python, SQL, CSS, C++, julia, javascript, entre otros.\nFormato de archivos: animaciones,interactividad con tablas (ordenado, filtrado y búsqueda), mapas, gráficos interactivos.\nExpresiones matemáticas con \\(\\LaTeX\\).\nTamaño del archivo.\nNo hay “Copiar y Pegar”, por lo que reduce errores, mantiene todo en un solo lugar y al día, programable para cambios de último momento."
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#comandos-básicos",
+    "href": "posts/hola-xaringan/index.html#comandos-básicos",
+    "title": "Hola Xaringan",
+    "section": "Comandos básicos",
+    "text": "Comandos básicos\n\nNueva diapositiva\nTres guiones ---\nContenido incremental\nDos guiones --\n\n\nImagen de fondo:\nclass: title-slide-portada\n\n\n\n\n\n\n\nInstrucción para crear portada\n\n\n\nAl crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ya ajustada y lista para modificarse dentro del YAML ubicado en las primeras líneas del archivo .Rmd.\n\n\n\nContenido general:\nclass: title-slide-interior\nDiapositiva de cierre:\nclass: title-slide-contraportada"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#cómo-creamos-la-presentacion",
+    "href": "posts/hola-xaringan/index.html#cómo-creamos-la-presentacion",
+    "title": "Hola Xaringan",
+    "section": "¿Cómo creamos la presentacion?",
+    "text": "¿Cómo creamos la presentacion?\nPara utilizar el formato de la Universidad:\n\nUsar la plantilla que se encuentra en el repositorio.\nDescargar el archivo .zip\n\n\n\n\n\n\n\nGuardar dentro de una carpeta.\nEjecutar el archivo ugto_xaringan.Rproj."
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#elementos-obligatorios-dentro-del-la-presentación",
+    "href": "posts/hola-xaringan/index.html#elementos-obligatorios-dentro-del-la-presentación",
+    "title": "Hola Xaringan",
+    "section": "Elementos obligatorios dentro del la presentación",
+    "text": "Elementos obligatorios dentro del la presentación\n\nTipografía\n\nPrincipal:\n\nNovecento Wide\nPara titulares o encabezados de primera importancia.\n\n\n\n\n\n\n\nNovecento\n\n\n\nEsta fuente solo contiene mayúsculas\n\n\n\n\nComplementarias:\n\nRaleway\nPara subtítulos o balazos en documentos, es posible emplearse en cuerpos de textos no largos.\nGandhi Sans y Gandhi Serif\nPara cuerpos de textos extensos y escritos en general, se recomiendan por su legibilidad.\n\n\nColores oficiales\n\n\n\n\n\n\n\n\n\n\nTable 1: Equivalencia\n\n\nPantone\nHexadecimal\n\n\n\n\n540C\n#003057\n\n\n121C\n#FDD757\n\n\n451C\n#9B945F\n\n\nNegro\n#231F20\n\n\nGris\n#CCCBC8\n\n\n\n\n\n\n\n\n\nImagenes oficiales\nHay dos resoluciones disponibles para las presentaciones, 4:3 y 16:9, para este tema usaremos las imágenes de la presentación panorámica. Portada y contraportada se ajustan perfecto a la presentación, para la diapositiva interior es necesario usar la imagen 4:3 pues se muestra mejor proporcionado el escudo y el contenido.\n\n\nPortada\n\n\n\n\n\n\n\n\nInterior\n\n\nFormato 4:3\n\n\n\n\n\n\n\n\nFormato 16:9\n\n\n\n\n\n\n\n\nContraportada\n\n\n\n\n\n\n\nDescargables\n\n\n\nComandos básicos\n\nNueva diapositiva\nTres guiones ---\n\nContenido incremental\nDos guiones --\n\n\n\nImagen de fondo:\nclass: title-slide-portada\n\n\n\n\n\n\n\n\nInstrucción para crear portada\n\n\n\nAl crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ya ajustada y lista para modificarse dentro del YAML ubicado en las primeras líneas del archivo .Rmd.\n\n\n\n\nContenido general:\nclass: title-slide-interior\n\nDiapositiva de cierre:\nclass: title-slide-contraportada"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#recursos",
+    "href": "posts/hola-xaringan/index.html#recursos",
+    "title": "Hola Xaringan",
+    "section": "Recursos",
+    "text": "Recursos\n\nEjemplos de otras universidades\n\nTexas&AM\nRutgers\nSydney"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#el-resultado",
+    "href": "posts/hola-xaringan/index.html#el-resultado",
+    "title": "Hola Xaringan",
+    "section": "El resultado",
+    "text": "El resultado\nAquí"
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#cómo-creamos-la-presentación",
+    "href": "posts/hola-xaringan/index.html#cómo-creamos-la-presentación",
+    "title": "Hola Xaringan",
+    "section": "¿Cómo creamos la presentación?",
+    "text": "¿Cómo creamos la presentación?\nPara utilizar el formato de la Universidad:\n\nUsar la plantilla que se encuentra en el repositorio.\nDescargar el archivo .zip\n\n\n\n\n\n\n\nGuardar dentro de una carpeta.\nEjecutar el archivo ugto_xaringan.Rproj."
+  },
+  {
+    "objectID": "posts/hola-xaringan/index.html#elementos-obligatorios-dentro-de-la-presentación",
+    "href": "posts/hola-xaringan/index.html#elementos-obligatorios-dentro-de-la-presentación",
+    "title": "Hola Xaringan",
+    "section": "Elementos obligatorios dentro de la presentación",
+    "text": "Elementos obligatorios dentro de la presentación\n\nTipografía\n\nPrincipal:\n\nNovecento Wide\nPara titulares o encabezados de primera importancia.\n\n\n\n\n\n\n\nNovecento\n\n\n\nEsta fuente solo contiene mayúsculas\n\n\n\n\nComplementarias:\n\nRaleway\nPara subtítulos o balazos en documentos, es posible emplearse en cuerpos de textos no largos.\nGandhi Sans y Gandhi Serif\nPara cuerpos de textos extensos y escritos en general, se recomiendan por su legibilidad.\n\n\nColores oficiales\n\n\n\n\n\n\n\n\n\n\nTable 1: Equivalencia\n\n\nPantone\nHexadecimal\n\n\n\n\n540C\n#003057\n\n\n121C\n#FDD757\n\n\n451C\n#9B945F\n\n\nNegro\n#231F20\n\n\nGris\n#CCCBC8\n\n\n\n\n\n\n\n\n\nImágenes oficiales\nHay dos resoluciones disponibles para las presentaciones, 4:3 y 16:9, para este tema usaremos las imágenes de la presentación panorámica. Portada y contraportada se ajustan perfecto a la presentación, para la diapositiva interior es necesario usar la imagen 4:3 pues se muestra mejor proporcionado el escudo y el contenido.\n\n\nPortada\n\n\n\n\n\n\n\n\nInterior\n\n\nFormato 4:3\n\n\n\n\n\n\n\n\nFormato 16:9\n\n\n\n\n\n\n\n\nContraportada\n\n\n\n\n\n\n\nDescargables\n\n\n\nComandos básicos\n\nNueva diapositiva\nTres guiones ---\n\nContenido incremental\nDos guiones --\n\n\n\nImagen de fondo:\nclass: title-slide-portada\n\n\n\n\n\n\n\n\nConsejo\n\n\n\nAl crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ajustada y lista para modificar los elementos necesarios de la portada dentro del YAML ubicado en las primeras líneas del archivo .Rmd.\n\n\n\n\nContenido general:\nclass: title-slide-interior\n\nDiapositiva de cierre:\nclass: title-slide-contraportada"
+  }
+]

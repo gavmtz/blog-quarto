@@ -1,0 +1,241 @@
+---
+title: "Hola Xaringan"
+subtitle: |
+  Tema de la Universidad de Guanajuato con Xaringan
+date: "2022-09-13"
+image: img/ppttheoffice.gif
+categories: [xaringan, r, markdown, LaTeX]
+code-fold: show
+---
+
+```{=html}
+<style>
+p{
+  text-indent: 1em;
+}
+</style>
+```
+## Hola Ninja
+
+`Xaringan` es un paquete para la creación de diapositivas con [remark.js](https://remarkjs.com/) a través de `Rmarkdown`. Su nombre proviene de [Sharingan](https://naruto.fandom.com/wiki/Sharingan) un dōjutsu del anime *Naruto*, desarrollado por [Yihui Xie](https://yihui.org/en/about/), ingeniero de software en [RStudio](https://www.rstudio.com).
+
+Para instalarlo en RStudio usando la consola:
+
+    install.packages("xaringan")
+
+Desde el repositorio en github (versión desarrollador):
+
+    remotes::install_github('yihui/xaringan')
+
+## ¿Cómo creamos la presentación?
+
+Para utilizar el formato de la Universidad:
+
+
+1. Usar la plantilla que se encuentra en el [repositorio](https://github.com/gavmtz/ugto_xaringan).
+
+2. Descargar el archivo .zip
+
+![](img/descarga_rep.png){fig-align="center" width="320"}
+
+3. Guardar dentro de una carpeta.
+
+4. Ejecutar el archivo `ugto_xaringan.Rproj`.
+
+<br>
+
+
+## Justificación
+
+
+La idea nace después conocer diferentes paqueterías del entorno **R**, una de ellas permite la creación de presentaciones como alternativa a PowerPoint.
+
+Entre sus características principales permite:
+
+-   Automatización y reproducibilidad.
+-   Almacenamiento en la "nube".
+-   Al procesarse se genera un archivo HTML ejecutable en exploradores web.
+-   Trabajar con código en R, python, SQL, CSS, C++, julia, javascript, entre otros.
+-   Formato de archivos: animaciones,interactividad con tablas (ordenado, filtrado y búsqueda), mapas, gráficos interactivos.
+-   Expresiones matemáticas con $\LaTeX$.
+-   Tamaño del archivo.
+-   No hay "Copiar y Pegar", por lo que reduce errores, mantiene todo en un solo lugar y al día, programable para cambios de último momento.
+
+
+## Elementos obligatorios dentro de la presentación
+
+
+### Tipografía
+
+-   Principal:
+
+**Novecento Wide**
+
+Para titulares o encabezados de primera importancia.
+
+<br>
+
+::: callout-warning
+## Novecento
+
+Esta fuente solo contiene mayúsculas
+:::
+
+<br>
+
+-   Complementarias:
+
+**Raleway**
+
+Para subtítulos o balazos en documentos, es posible emplearse en cuerpos de textos no largos.
+
+**Gandhi Sans** y **Gandhi Serif**
+
+Para cuerpos de textos extensos y escritos en general, se recomiendan por su legibilidad.
+
+
+
+
+### Colores oficiales
+
+
+![](img/PaletaCol.png){fig-align="center" width="420"}
+
+<br>
+
+```{r}
+#| label: tbl-colores
+#| tbl-cap: Equivalencia
+#| column: body
+#| echo: false
+colores <- data.frame(
+  Pantone = c("540C","121C","451C","Negro","Gris"),
+  Hexadecimal = c("#003057","#FDD757","#9B945F","#231F20","#CCCBC8")
+)
+knitr::kable(colores, align = "c")
+```
+
+<br>
+
+
+### Imágenes oficiales
+
+Hay dos resoluciones disponibles para las presentaciones, 4:3 y 16:9, para este tema usaremos las imágenes de la presentación panorámica. Portada y contraportada se ajustan perfecto a la presentación, para la diapositiva interior es necesario usar la imagen 4:3 pues se muestra mejor proporcionado el escudo y el contenido.
+
+<br>
+
+-   Portada
+
+![](img/portada16_9.png){fig-align="center" width="420"}
+
+
+<br>
+
+-   Interior
+
+::: {style="text-align:center"}
+Formato 4:3
+:::
+
+
+![](img/interior.png){fig-align="center" width="420"}
+
+<br>
+
+::: {style="text-align:center"}
+Formato 16:9
+:::
+
+
+![](img/interior16_9.png){fig-align="center" width="420"}
+
+<br>
+
+-   Contraportada
+
+
+![](img/contraportada16_9.png){fig-align="center" width="420"}
+
+<br>
+
+[Descargables](https://ugto.mx/imagenug/descargar-aplicaciones)
+
+<br>
+
+
+### Comandos básicos
+
+
+::: {style="text-align:center"}
+
+*Nueva diapositiva*
+
+Tres guiones `---`
+
+<br>
+
+*Contenido incremental*
+
+Dos guiones `--`
+
+:::
+
+<br>
+
+::: {style="text-align:center"}
+
+Imagen de fondo:
+
+class: title-slide-portada
+
+:::
+
+<br>
+
+::: callout-tip
+## Consejo
+
+Al crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ajustada y lista para modificar los elementos necesarios de la portada dentro del _YAML_ ubicado en las primeras líneas del archivo `.Rmd`.
+:::
+
+<br>
+
+::: {style="text-align:center"}
+
+Contenido general:
+
+class: title-slide-interior
+
+<br>
+
+Diapositiva de cierre:
+
+class: title-slide-contraportada
+
+:::
+
+
+<br>
+
+
+## Recursos
+
+*   Ejemplos de otras universidades
+
+
+[Texas&AM](https://nanhung.rbind.io/slide/tamu-slide-template.html#1)
+
+[Rutgers](https://github.com/jvcasillas/ru_xaringan)
+
+[Sydney](http://garthtarr.github.io/sydney_xaringan)
+
+
+<br>
+
+
+
+## El resultado
+
+
+[Aquí](https://gavmtz.github.io/ugto_xaringan/#1)
+

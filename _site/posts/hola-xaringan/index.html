@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gerardo Avila-Martínez">
+<meta name="dcterms.date" content="2022-09-13">
+
+<title>data-ride-blog - Hola Xaringan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="data-ride-blog - Hola Xaringan">
+<meta property="og:description" content="Tema de la Universidad de Guanajuato con Xaringan">
+<meta property="og:image" content="img/ppttheoffice.gif">
+<meta property="og:site-name" content="data-ride-blog">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">data-ride-blog</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">inicio</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">blog</a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Hola Xaringan</h1>
+            <p class="subtitle lead"></p><p>Tema de la Universidad de Guanajuato con Xaringan</p><p></p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">xaringan</div>
+                <div class="quarto-category">r</div>
+                <div class="quarto-category">markdown</div>
+                <div class="quarto-category">LaTeX</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Gerardo Avila-Martínez </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 13, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#hola-ninja" id="toc-hola-ninja" class="nav-link active" data-scroll-target="#hola-ninja">Hola Ninja</a></li>
+  <li><a href="#cómo-creamos-la-presentación" id="toc-cómo-creamos-la-presentación" class="nav-link" data-scroll-target="#cómo-creamos-la-presentación">¿Cómo creamos la presentación?</a></li>
+  <li><a href="#justificación" id="toc-justificación" class="nav-link" data-scroll-target="#justificación">Justificación</a></li>
+  <li><a href="#elementos-obligatorios-dentro-de-la-presentación" id="toc-elementos-obligatorios-dentro-de-la-presentación" class="nav-link" data-scroll-target="#elementos-obligatorios-dentro-de-la-presentación">Elementos obligatorios dentro de la presentación</a>
+  <ul class="collapse">
+  <li><a href="#tipografía" id="toc-tipografía" class="nav-link" data-scroll-target="#tipografía">Tipografía</a></li>
+  <li><a href="#colores-oficiales" id="toc-colores-oficiales" class="nav-link" data-scroll-target="#colores-oficiales">Colores oficiales</a></li>
+  <li><a href="#imágenes-oficiales" id="toc-imágenes-oficiales" class="nav-link" data-scroll-target="#imágenes-oficiales">Imágenes oficiales</a></li>
+  <li><a href="#comandos-básicos" id="toc-comandos-básicos" class="nav-link" data-scroll-target="#comandos-básicos">Comandos básicos</a></li>
+  </ul></li>
+  <li><a href="#recursos" id="toc-recursos" class="nav-link" data-scroll-target="#recursos">Recursos</a></li>
+  <li><a href="#el-resultado" id="toc-el-resultado" class="nav-link" data-scroll-target="#el-resultado">El resultado</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/gavmtz/blog-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<style>
+p{
+  text-indent: 1em;
+}
+</style>
+<section id="hola-ninja" class="level2">
+<h2 class="anchored" data-anchor-id="hola-ninja">Hola Ninja</h2>
+<p><code>Xaringan</code> es un paquete para la creación de diapositivas con <a href="https://remarkjs.com/">remark.js</a> a través de <code>Rmarkdown</code>. Su nombre proviene de <a href="https://naruto.fandom.com/wiki/Sharingan">Sharingan</a> un dōjutsu del anime <em>Naruto</em>, desarrollado por <a href="https://yihui.org/en/about/">Yihui Xie</a>, ingeniero de software en <a href="https://www.rstudio.com">RStudio</a>.</p>
+<p>Para instalarlo en RStudio usando la consola:</p>
+<pre><code>install.packages("xaringan")</code></pre>
+<p>Desde el repositorio en github (versión desarrollador):</p>
+<pre><code>remotes::install_github('yihui/xaringan')</code></pre>
+</section>
+<section id="cómo-creamos-la-presentación" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-creamos-la-presentación">¿Cómo creamos la presentación?</h2>
+<p>Para utilizar el formato de la Universidad:</p>
+<ol type="1">
+<li><p>Usar la plantilla que se encuentra en el <a href="https://github.com/gavmtz/ugto_xaringan">repositorio</a>.</p></li>
+<li><p>Descargar el archivo .zip</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/descarga_rep.png" class="img-fluid figure-img" width="320"></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li><p>Guardar dentro de una carpeta.</p></li>
+<li><p>Ejecutar el archivo <code>ugto_xaringan.Rproj</code>.</p></li>
+</ol>
+<p><br></p>
+</section>
+<section id="justificación" class="level2">
+<h2 class="anchored" data-anchor-id="justificación">Justificación</h2>
+<p>La idea nace después conocer diferentes paqueterías del entorno <strong>R</strong>, una de ellas permite la creación de presentaciones como alternativa a PowerPoint.</p>
+<p>Entre sus características principales permite:</p>
+<ul>
+<li>Automatización y reproducibilidad.</li>
+<li>Almacenamiento en la “nube”.</li>
+<li>Al procesarse se genera un archivo HTML ejecutable en exploradores web.</li>
+<li>Trabajar con código en R, python, SQL, CSS, C++, julia, javascript, entre otros.</li>
+<li>Formato de archivos: animaciones,interactividad con tablas (ordenado, filtrado y búsqueda), mapas, gráficos interactivos.</li>
+<li>Expresiones matemáticas con <span class="math inline">\(\LaTeX\)</span>.</li>
+<li>Tamaño del archivo.</li>
+<li>No hay “Copiar y Pegar”, por lo que reduce errores, mantiene todo en un solo lugar y al día, programable para cambios de último momento.</li>
+</ul>
+</section>
+<section id="elementos-obligatorios-dentro-de-la-presentación" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="elementos-obligatorios-dentro-de-la-presentación">Elementos obligatorios dentro de la presentación</h2>
+<section id="tipografía" class="level3">
+<h3 class="anchored" data-anchor-id="tipografía">Tipografía</h3>
+<ul>
+<li>Principal:</li>
+</ul>
+<p><strong>Novecento Wide</strong></p>
+<p>Para titulares o encabezados de primera importancia.</p>
+<p><br></p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Novecento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esta fuente solo contiene mayúsculas</p>
+</div>
+</div>
+<p><br></p>
+<ul>
+<li>Complementarias:</li>
+</ul>
+<p><strong>Raleway</strong></p>
+<p>Para subtítulos o balazos en documentos, es posible emplearse en cuerpos de textos no largos.</p>
+<p><strong>Gandhi Sans</strong> y <strong>Gandhi Serif</strong></p>
+<p>Para cuerpos de textos extensos y escritos en general, se recomiendan por su legibilidad.</p>
+</section>
+<section id="colores-oficiales" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="colores-oficiales">Colores oficiales</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/PaletaCol.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
+<p><br></p>
+<div class="cell page-columns page-full">
+<div class="cell-output-display column-body">
+<div id="tbl-colores" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table 1: Equivalencia</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Pantone</th>
+<th style="text-align: center;">Hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">540C</td>
+<td style="text-align: center;">#003057</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">121C</td>
+<td style="text-align: center;">#FDD757</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">451C</td>
+<td style="text-align: center;">#9B945F</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Negro</td>
+<td style="text-align: center;">#231F20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Gris</td>
+<td style="text-align: center;">#CCCBC8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="imágenes-oficiales" class="level3">
+<h3 class="anchored" data-anchor-id="imágenes-oficiales">Imágenes oficiales</h3>
+<p>Hay dos resoluciones disponibles para las presentaciones, 4:3 y 16:9, para este tema usaremos las imágenes de la presentación panorámica. Portada y contraportada se ajustan perfecto a la presentación, para la diapositiva interior es necesario usar la imagen 4:3 pues se muestra mejor proporcionado el escudo y el contenido.</p>
+<p><br></p>
+<ul>
+<li>Portada</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/portada16_9.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
+<p><br></p>
+<ul>
+<li>Interior</li>
+</ul>
+<div style="text-align:center">
+<p>Formato 4:3</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/interior.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
+<p><br></p>
+<div style="text-align:center">
+<p>Formato 16:9</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/interior16_9.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
+<p><br></p>
+<ul>
+<li>Contraportada</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/contraportada16_9.png" class="img-fluid figure-img" width="420"></p>
+</figure>
+</div>
+<p><br></p>
+<p><a href="https://ugto.mx/imagenug/descargar-aplicaciones">Descargables</a></p>
+<p><br></p>
+</section>
+<section id="comandos-básicos" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-básicos">Comandos básicos</h3>
+<div style="text-align:center">
+<p><em>Nueva diapositiva</em></p>
+<p>Tres guiones <code>---</code></p>
+<p><br></p>
+<p><em>Contenido incremental</em></p>
+<p>Dos guiones <code>--</code></p>
+</div>
+<p><br></p>
+<div style="text-align:center">
+<p>Imagen de fondo:</p>
+<p>class: title-slide-portada</p>
+</div>
+<p><br></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Consejo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Al crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ajustada y lista para modificar los elementos necesarios de la portada dentro del <em>YAML</em> ubicado en las primeras líneas del archivo <code>.Rmd</code>.</p>
+</div>
+</div>
+<p><br></p>
+<div style="text-align:center">
+<p>Contenido general:</p>
+<p>class: title-slide-interior</p>
+<p><br></p>
+<p>Diapositiva de cierre:</p>
+<p>class: title-slide-contraportada</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="recursos" class="level2">
+<h2 class="anchored" data-anchor-id="recursos">Recursos</h2>
+<ul>
+<li>Ejemplos de otras universidades</li>
+</ul>
+<p><a href="https://nanhung.rbind.io/slide/tamu-slide-template.html#1">Texas&amp;AM</a></p>
+<p><a href="https://github.com/jvcasillas/ru_xaringan">Rutgers</a></p>
+<p><a href="http://garthtarr.github.io/sydney_xaringan">Sydney</a></p>
+<p><br></p>
+</section>
+<section id="el-resultado" class="level2">
+<h2 class="anchored" data-anchor-id="el-resultado">El resultado</h2>
+<p><a href="https://gavmtz.github.io/ugto_xaringan/#1">Aquí</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{avila-martínez2022,
+  author = {Gerardo Avila-Martínez},
+  title = {Hola {Xaringan}},
+  date = {2022-09-13},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-avila-martínez2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Gerardo Avila-Martínez. 2022. <span>“Hola Xaringan.”</span> September
+13, 2022.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog hecho con RStudio y <a href="https://quarto.org/">Quarto</a></div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/gavmtz/blog-quarto">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:wpgam@outlook.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

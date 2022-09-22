@@ -1,0 +1,22 @@
+---
+title: "Acerca de mí"
+image: perfil.png
+about:
+  template: solana
+  image-width: 10em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gerardo-avila-mart%C3%ADnez-430092204/
+    - icon: github
+      text: Github
+      href: https://github.com/gavmtz
+    - icon: envelope
+      text: Correo
+      href: mailto:wpgam@outlook.com
+---
+
+
+Saludos visitante <span class="wave">👋</span>, soy Gerardo, estudiante en la **Universidad de Guanajuato** de la carrera en Biotecnología, me entusiasma lo relacionado a la ciencia de datos: análisis exploratorio, estadística y modelos de aprendizaje automático usando **R** y Python, he destinado este blog para compartir temas de interés. 
+Tengo experiencia en laboratorio de investigación dentro del área agrícola y procesos biológicos, en la industria colaboré dentro de una consultoría en seguridad e higiene ambiental. Actualmente en busca de una posicion dentro de un equipo de analisis de datos. 

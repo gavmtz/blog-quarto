@@ -1,0 +1,38 @@
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: auto
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Enable CC licence appendix
+license: "CC BY"
+
+# Tabla de contenido
+toc: true
+toc-title: Contenido
+toc-location: right
+
+# opciones knitr por defecto
+execute:
+  echo: true
+  message: false
+  warning: false
+  
+# Autor de la publicación
+author:
+  - name: Gerardo Avila-Martínez
+#    url: https://blog.datarideonline.net
+#    affiliation: 
+#    affiliation-url: 
+#   orcid: 0000-0000-0000-0000
+
+# Citado de la publicacion (citado formato BibTeX)
+citation: true
+
+
+format:
+  html:
+    code-fold: true
