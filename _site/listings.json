@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/pivote/index.html",
       "/posts/hola-xaringan/index.html"
     ]
   }
