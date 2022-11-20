@@ -18,7 +18,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "Tema de la Universidad de Guanajuato con Xaringan\n\n\n\nGerardo Avila-Martínez\n\n\nSep 13, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Ejemplos de como transformar datos usando R\n\n\n\nGerardo Avila-Martínez\n\n\nNov 13, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTema de la Universidad de Guanajuato con Xaringan\n\n\n\nGerardo Avila-Martínez\n\n\nSep 13, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hola-xaringan/index.html#cómo-creamos-una-presentacion",
@@ -96,5 +96,54 @@
     "title": "Hola Xaringan",
     "section": "Elementos obligatorios dentro de la presentación",
     "text": "Elementos obligatorios dentro de la presentación\n\nTipografía\n\nPrincipal:\n\nNovecento Wide\nPara titulares o encabezados de primera importancia.\n\n\n\n\n\n\n\nNovecento\n\n\n\nEsta fuente solo contiene mayúsculas\n\n\n\n\nComplementarias:\n\nRaleway\nPara subtítulos o balazos en documentos, es posible emplearse en cuerpos de textos no largos.\nGandhi Sans y Gandhi Serif\nPara cuerpos de textos extensos y escritos en general, se recomiendan por su legibilidad.\n\n\nColores oficiales\n\n\n\n\n\n\n\n\n\n\nTable 1: Equivalencia\n\n\nPantone\nHexadecimal\n\n\n\n\n540C\n#003057\n\n\n121C\n#FDD757\n\n\n451C\n#9B945F\n\n\nNegro\n#231F20\n\n\nGris\n#CCCBC8\n\n\n\n\n\n\n\n\n\nImágenes oficiales\nHay dos resoluciones disponibles para las presentaciones, 4:3 y 16:9, para este tema usaremos las imágenes de la presentación panorámica. Portada y contraportada se ajustan perfecto a la presentación, para la diapositiva interior es necesario usar la imagen 4:3 pues se muestra mejor proporcionado el escudo y el contenido.\n\n\nPortada\n\n\n\n\n\n\n\n\nInterior\n\n\nFormato 4:3\n\n\n\n\n\n\n\n\nFormato 16:9\n\n\n\n\n\n\n\n\nContraportada\n\n\n\n\n\n\n\nDescargables\n\n\n\nComandos básicos\n\nNueva diapositiva\nTres guiones ---\n\nContenido incremental\nDos guiones --\n\n\n\nImagen de fondo:\nclass: title-slide-portada\n\n\n\n\n\n\n\n\nConsejo\n\n\n\nAl crear la diapositiva con este comando los encabezados no se ajustarán debajo del escudo. Por defecto se encuentra ajustada y lista para modificar los elementos necesarios de la portada dentro del YAML ubicado en las primeras líneas del archivo .Rmd.\n\n\n\n\nContenido general:\nclass: title-slide-interior\n\nDiapositiva de cierre:\nclass: title-slide-contraportada"
+  },
+  {
+    "objectID": "posts/pivote/index.html",
+    "href": "posts/pivote/index.html",
+    "title": "Transformación de datos con tidyr",
+    "section": "",
+    "text": "Para realizar un análisis de un determinado conjunto de datos en su mayoría los encontraremos desordenados por lo que necesita una transformación, este debe cumplir así una estructura determinada respondiendo a nuestras necesidades."
+  },
+  {
+    "objectID": "posts/pivote/index.html#tidy-data",
+    "href": "posts/pivote/index.html#tidy-data",
+    "title": "Transformación de datos con tidyr",
+    "section": "Tidy data",
+    "text": "Tidy data\n\nEs una manera de organizar los datos tabulares en una estructura consistente.\n\nTal conjunto de datos cumple con tres reglas relacionadas entre sí como se muestra a continuación:\n\n\n\nImagen 1. a) Cada variable está en su propia columna. b) Cada observación o caso, se encuentra en su propio renglón (fila) y c) Cada valor dentro de una celda; cada celda es un valor único."
+  },
+  {
+    "objectID": "posts/pivote/index.html#ejemplos",
+    "href": "posts/pivote/index.html#ejemplos",
+    "title": "Transformación de datos con tidyr",
+    "section": "Ejemplos",
+    "text": "Ejemplos\nA continuación, trabajaremos con tres conjuntos de datos:\nTabla 3.1 de Gutíerrez Pulido Humberto (2008).\n\n\n\n\nMétodo de ensamble\n \n  \n    A \n    B \n    C \n    D \n  \n \n\n  \n    6 \n    7 \n    11 \n    10 \n  \n  \n    8 \n    9 \n    16 \n    12 \n  \n  \n    7 \n    10 \n    11 \n    11 \n  \n  \n    8 \n    8 \n    13 \n    9 \n  \n\n\n\n\n\n\nSimilar al ejemplo anterior con una ligera diferencia. Tabla 3.2 de Gutíerrez Pulido Humberto (2008).\n\n\n\n\nComparacion de cuatro tipos (cuatro tratamientos)\n \n  \n    Tipo de cuero \n    Obs 1 \n    Obs 2 \n    Obs 3 \n    Obs 4 \n    Obs 5 \n    Obs 6 \n  \n \n\n  \n    A \n    264 \n    260 \n    258 \n    241 \n    262 \n    255 \n  \n  \n    B \n    208 \n    220 \n    216 \n    200 \n    213 \n    206 \n  \n  \n    C \n    220 \n    263 \n    219 \n    225 \n    230 \n    228 \n  \n  \n    D \n    217 \n    226 \n    215 \n    227 \n    220 \n    222 \n  \n\n\n\n\n\n\nTabla en formato largo.\n\n\n\n\nDosis de fertilizante\n \n  \n    Ensayo \n    Variable \n    Dosis \n  \n \n\n  \n    A \n    Nitrógeno \n    88 \n  \n  \n    A \n    Fósforo \n    12 \n  \n  \n    A \n    Potasio \n    22 \n  \n  \n    B \n    Nitrógeno \n    91 \n  \n  \n    B \n    Fósforo \n    17 \n  \n  \n    B \n    Potasio \n    28 \n  \n  \n    C \n    Nitrógeno \n    99 \n  \n  \n    C \n    Fósforo \n    24 \n  \n  \n    C \n    Potasio \n    30 \n  \n  \n    D \n    Nitrógeno \n    94 \n  \n  \n    D \n    Fósforo \n    28 \n  \n  \n    D \n    Potasio \n    31"
+  },
+  {
+    "objectID": "posts/pivote/index.html#pivotado",
+    "href": "posts/pivote/index.html#pivotado",
+    "title": "Transformación de datos con tidyr",
+    "section": "Pivotado",
+    "text": "Pivotado\nPara realizar el pivotado usaremos dos funciones dentro de la librería tidyr:\n\npivot_longer()\npivot_wider()"
+  },
+  {
+    "objectID": "posts/pivote/index.html#funciones-pivote-en-acción",
+    "href": "posts/pivote/index.html#funciones-pivote-en-acción",
+    "title": "Transformación de datos con tidyr",
+    "section": "Funciones pivote en acción",
+    "text": "Funciones pivote en acción\n\nTabla 1\nUn conjunto de datos amplio que transformaremos a un formato largo.\n\n\nCode\nm_ensamble_l <- m_ensamble_t %>% \n  tidyr::pivot_longer(cols = 1:4,\n                      names_to = 'Método',\n                      values_to = 'Minutos')\n\n\n\n\n\n\nMétodo de ensamble\n \n  \n    Método \n    Minutos \n  \n \n\n  \n    A \n    6 \n  \n  \n    B \n    7 \n  \n  \n    C \n    11 \n  \n  \n    D \n    10 \n  \n  \n    A \n    8 \n  \n  \n    B \n    9 \n  \n  \n    C \n    16 \n  \n  \n    D \n    12 \n  \n  \n    A \n    7 \n  \n  \n    B \n    10 \n  \n  \n    C \n    11 \n  \n  \n    D \n    11 \n  \n  \n    A \n    8 \n  \n  \n    B \n    8 \n  \n  \n    C \n    13 \n  \n  \n    D \n    9 \n  \n\n\n\n\n\n\n\nTabla 2\nNota que esta tabla contiene observaciones como variables, un poco diferente al ejemplo anterior, pero no hay inconveniente a la hora de transformar.\n\n\nCode\ntc <- tipos_c %>% \n  tidyr::pivot_longer(cols = 2:7,\n                      names_to = \"Observación\",\n                      values_to = \"Lectura\")\n\n\n\n\n\n\nComparacion de cuatro tipos (cuatro tratamientos)\n \n  \n    Tipo de cuero \n    Observación \n    Lectura \n  \n \n\n  \n    A \n    Obs 1 \n    264 \n  \n  \n    A \n    Obs 2 \n    260 \n  \n  \n    A \n    Obs 3 \n    258 \n  \n  \n    A \n    Obs 4 \n    241 \n  \n  \n    A \n    Obs 5 \n    262 \n  \n  \n    A \n    Obs 6 \n    255 \n  \n  \n    B \n    Obs 1 \n    208 \n  \n  \n    B \n    Obs 2 \n    220 \n  \n  \n    B \n    Obs 3 \n    216 \n  \n  \n    B \n    Obs 4 \n    200 \n  \n  \n    B \n    Obs 5 \n    213 \n  \n  \n    B \n    Obs 6 \n    206 \n  \n  \n    C \n    Obs 1 \n    220 \n  \n  \n    C \n    Obs 2 \n    263 \n  \n  \n    C \n    Obs 3 \n    219 \n  \n  \n    C \n    Obs 4 \n    225 \n  \n  \n    C \n    Obs 5 \n    230 \n  \n  \n    C \n    Obs 6 \n    228 \n  \n  \n    D \n    Obs 1 \n    217 \n  \n  \n    D \n    Obs 2 \n    226 \n  \n  \n    D \n    Obs 3 \n    215 \n  \n  \n    D \n    Obs 4 \n    227 \n  \n  \n    D \n    Obs 5 \n    220 \n  \n  \n    D \n    Obs 6 \n    222 \n  \n\n\n\n\n\n\n\nTabla 3\nPor último, nos encontramos con redundancia en los datos como ocurre en la columna variable la cual deseo convertir en variables.\n\n\nCode\nfert_t <- tidyr::pivot_wider(fert, names_from = \"Variable\",\n            values_from = \"Dosis\")\n\n\n\n\n\n\nDosis de fertilizante\n \n  \n    Ensayo \n    Nitrógeno \n    Fósforo \n    Potasio \n  \n \n\n  \n    A \n    88 \n    12 \n    22 \n  \n  \n    B \n    91 \n    17 \n    28 \n  \n  \n    C \n    99 \n    24 \n    30 \n  \n  \n    D \n    94 \n    28 \n    31 \n  \n\n\n\n\n\n\nExplicación\n\npivot_longer()\ncols selecciona el número de variables presentes en columnas y que pasarán a una sola.\nnames_to es el nombre de la nueva columna que contiene las variables.\nvalues_to el nombre a elegir que mostrará los valores presentes del conjunto de datos.\npivot_wider()\nnames_from hace referencia a la columna Variable pasando a ser una columna.\nvalues_from los valores de dosis de fertilizante para cada variable (columna)."
+  },
+  {
+    "objectID": "posts/pivote/index.html#referencias",
+    "href": "posts/pivote/index.html#referencias",
+    "title": "Transformación de datos con tidyr",
+    "section": "Referencias",
+    "text": "Referencias"
+  },
+  {
+    "objectID": "posts/pivote/index.html#conclusiones",
+    "href": "posts/pivote/index.html#conclusiones",
+    "title": "Transformación de datos con tidyr",
+    "section": "Conclusiones",
+    "text": "Conclusiones\nLas funciones presentadas aquí nos facilitan transformar nuestros datos una vez que distinguimos de manera clara entre variables, observaciones y valores. Tal ordenamiento puede ser interpretado sin problema por la computadora, ahora están listos para un documento o un análisis estadístico."
   }
 ]

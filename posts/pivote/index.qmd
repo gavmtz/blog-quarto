@@ -1,0 +1,206 @@
+---
+title: "Transformación de datos con tidyr"
+subtitle: |
+  Ejemplos de como transformar datos usando R
+date: "2022-11-13"
+image: img1_tidy.png
+categories: [tidyverse, tidyr, pivote ]
+code-fold: show
+bibliography: adoe.bib
+
+---
+
+```{=html}
+<style>
+p{
+  text-indent: 1em;
+}
+</style>
+```
+
+## Introducción
+
+
+Para realizar un análisis de un determinado conjunto de datos en su mayoría los encontraremos desordenados por lo que necesita una transformación, este debe cumplir así una estructura determinada respondiendo a nuestras necesidades.
+
+
+## _Tidy data_
+
+
+> Es una manera de organizar los datos tabulares en una estructura consistente.
+
+Tal conjunto de datos cumple con tres reglas relacionadas entre sí como se muestra a continuación:
+
+
+![Imagen 1. a) Cada variable está en su propia columna. b) Cada observación o caso, se encuentra en su propio renglón (fila) y c) Cada valor dentro de una celda; cada celda es un valor único.](img1_tidy.png){fig-align="center" width="380"}
+
+
+## Ejemplos
+
+
+A continuación, trabajaremos con tres conjuntos de datos:
+
+Tabla 3.1 de @hr2008analisis.
+
+```{r metodos}
+#| echo = FALSE
+
+library(magrittr)
+
+m_ensamble <- data.frame(
+  A = c(6,8,7,8), B = c(7,9,10,8),
+  C = c(11,16,11,13), D = c(10,12,11,9))
+
+m_ensamble_t <- tibble::as_tibble(m_ensamble)
+
+m_ensamble_t %>%
+  kableExtra::kbl(caption = "Método de ensamble",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato") 
+```
+
+</br>
+
+Similar al ejemplo anterior con una ligera diferencia. Tabla 3.2 de @hr2008analisis.
+
+```{r tipos}
+#| echo = FALSE
+tipos_c <- tibble::tribble(
+  ~'Tipo de cuero', ~'Obs 1',~'Obs 2',~'Obs 3',~'Obs 4',~'Obs 5',~'Obs 6',
+             "A",   264,   260,   258,    241,   262,   255,
+             "B",   208,   220,   216,    200,   213,   206,
+             "C",   220,   263,   219,    225,   230,   228,
+             "D",   217,   226,   215,    227,   220,   222
+  )
+
+tipos_c %>%
+  kableExtra::kbl(caption = "Comparacion de cuatro tipos (cuatro tratamientos)",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato")
+```
+
+
+</br>
+
+Tabla en formato largo.
+
+```{r fertilizante}
+#| echo = FALSE
+
+fert <- data.frame(
+  Ensayo = c('A','A','A','B','B','B',
+             'C','C','C','D','D','D'),
+  Variable = rep(c('Nitrógeno', 'Fósforo', 'Potasio'), 4),
+  Dosis = c(88,12,22,91,17,28,
+              99,24,30,94,28,31))
+fert %>%
+  kableExtra::kbl(caption = "Dosis de fertilizante",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato")
+```
+
+</br>
+
+## Pivotado
+
+Para realizar el pivotado usaremos dos funciones dentro de la librería `tidyr`:
+
+-   `pivot_longer()`
+
+
+-   `pivot_wider()`
+
+
+
+## Funciones pivote en acción
+
+
+### Tabla 1
+
+Un conjunto de datos amplio que transformaremos a un formato largo.
+
+
+```{r}
+m_ensamble_l <- m_ensamble_t %>% 
+  tidyr::pivot_longer(cols = 1:4,
+                      names_to = 'Método',
+                      values_to = 'Minutos')
+```
+
+```{r}
+#| echo: false
+m_ensamble_l %>%
+  kableExtra::kbl(caption = "Método de ensamble",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato")
+```
+
+
+### Tabla 2
+
+Nota que esta tabla contiene observaciones como variables, un poco diferente al ejemplo anterior, pero no hay inconveniente a la hora de transformar.
+
+```{r}
+
+tc <- tipos_c %>% 
+  tidyr::pivot_longer(cols = 2:7,
+                      names_to = "Observación",
+                      values_to = "Lectura")
+```
+
+
+```{r}
+#| echo: false
+tc %>%
+  kableExtra::kbl(caption = "Comparacion de cuatro tipos (cuatro tratamientos)",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato")
+```
+
+
+### Tabla 3
+
+Por último, nos encontramos con redundancia en los datos como ocurre en la columna _variable_ la cual deseo convertir en variables.
+
+```{r}
+fert_t <- tidyr::pivot_wider(fert, names_from = "Variable",
+            values_from = "Dosis")
+```
+
+```{r}
+#| echo: false
+fert_t %>%
+  kableExtra::kbl(caption = "Dosis de fertilizante",
+                  html_font = "Lato") %>%
+  kableExtra::kable_minimal(full_width = F,
+                            html_font = "Lato")
+```
+
+
+#### Explicación
+
+- `pivot_longer()`
+* `cols` selecciona el número de variables presentes en columnas y que pasarán a una sola.
+* `names_to` es el nombre de la nueva columna que contiene las variables.
+* `values_to` el nombre a elegir que mostrará los valores presentes del conjunto de datos.
+
+- `pivot_wider()`
+* `names_from` hace referencia a la columna _Variable_ pasando a ser una columna.
+* `values_from` los valores de dosis de fertilizante para cada variable (columna).
+
+
+## Conclusiones
+
+Las funciones presentadas aquí nos facilitan transformar nuestros datos una vez que distinguimos de manera clara entre variables, observaciones y valores.
+Tal ordenamiento puede ser interpretado sin problema por la computadora, ahora están listos para un documento o un análisis estadístico.
+
+
+
+
+## Referencias
+
