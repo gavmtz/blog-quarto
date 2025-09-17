@@ -18,5 +18,5 @@ about:
 ---
 
 
-Saludos visitante <span class="wave">👋</span>, soy Gerardo, estudiante en la **Universidad de Guanajuato** de la carrera en Biotecnología, me entusiasma lo relacionado a la ciencia de datos: análisis exploratorio, estadística y modelos de aprendizaje automático usando **R** y Python, he destinado este blog para compartir temas de interés. 
+Saludos visitante <span class="wave">👋</span>, soy Gerardo, egresado de la **Universidad de Guanajuato** de la carrera en Biotecnología, me entusiasma lo relacionado a la ciencia de datos: análisis exploratorio, estadística y modelos de aprendizaje automático usando **R** y Python, he destinado este blog para compartir temas de interés. 
 Tengo experiencia en laboratorio de investigación dentro del área agrícola y procesos biológicos, en la industria colaboré dentro de una consultoría en seguridad e higiene ambiental. Actualmente en busca de una posicion dentro de un equipo de analisis de datos. 
